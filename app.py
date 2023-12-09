@@ -24,11 +24,11 @@ def predict():
     compound_score = sentiment['compound']
 
     if compound_score >= 0.5:
-        sentiment_label = 'This is a positive statement'
+        sentiment_label = 'This sentence is positive'
     elif 0.0 <= compound_score < 0.5:
-        sentiment_label = 'This is a neutral statement'
+        sentiment_label = 'This sentence is  neutral'
     else:
-        sentiment_label = 'This is a negative statement'
+        sentiment_label = 'This sentence is negative'
 
     # Return simplified sentiment label
     return jsonify({'sentiment': sentiment_label})
